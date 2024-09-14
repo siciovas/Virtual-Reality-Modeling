@@ -1,0 +1,123 @@
+[gd_scene load_steps=24 format=3 uid="uid://cfeh5ed0e70w2"]
+
+[ext_resource type="PackedScene" uid="uid://utw58fonnm0o" path="res://meshes/GothicCommode/GothicCommode_01_1k.gltf" id="1_ctvwy"]
+[ext_resource type="Texture2D" uid="uid://bqwi077qplpxx" path="res://textures/rectangular_parquet_diff_1k.jpg" id="2_06vl6"]
+[ext_resource type="Texture2D" uid="uid://br54m16hvusw2" path="res://textures/pavement_02_disp_1k.jpg" id="3_1olvp"]
+[ext_resource type="Texture2D" uid="uid://dgh57g21oogya" path="res://textures/beige_wall_001_disp_1k.jpg" id="4_3rpde"]
+[ext_resource type="PackedScene" uid="uid://02mcq1cmyrvi" path="res://meshes/GreenChair/GreenChair_01_1k.gltf" id="5_6ck2q"]
+[ext_resource type="PackedScene" uid="uid://dpk4e4ftbu2pt" path="res://meshes/ModernWoodenCabinet/modern_wooden_cabinet_1k.gltf" id="6_dumj7"]
+[ext_resource type="PackedScene" uid="uid://bjinwwkb8a5yv" path="res://meshes/Ottoman/Ottoman_01_1k.gltf" id="7_8vye4"]
+[ext_resource type="PackedScene" uid="uid://crmtg5jttqyar" path="res://meshes/SideTableTall/side_table_tall_01_1k.gltf" id="8_yuwiw"]
+[ext_resource type="PackedScene" uid="uid://n1c36ue07n6b" path="res://meshes/SmallWoodenTable/small_wooden_table_01_1k.gltf" id="9_g1165"]
+[ext_resource type="PackedScene" uid="uid://dwe7syk40lhpo" path="res://meshes/Joystick/gamepad_1k.gltf" id="10_iat2d"]
+[ext_resource type="PackedScene" uid="uid://xhwir1mpfajm" path="res://meshes/Mirror/ornate_mirror_01_1k.gltf" id="11_t0rs0"]
+[ext_resource type="PackedScene" uid="uid://vc324bv2x641" path="res://meshes/GothicBed/GothicBed_01_1k.gltf" id="12_socks"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5aq0"]
+albedo_texture = ExtResource("2_06vl6")
+uv1_scale = Vector3(5, 5, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rkdg6"]
+material = SubResource("StandardMaterial3D_y5aq0")
+uv2_padding = 1.64
+size = Vector3(5.5, 0.1, 7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxe1b"]
+albedo_texture = ExtResource("3_1olvp")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_icwt6"]
+material = SubResource("StandardMaterial3D_vxe1b")
+size = Vector3(0.1, 2.5, 7.16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8tlf2"]
+albedo_texture = ExtResource("4_3rpde")
+
+[sub_resource type="BoxMesh" id="BoxMesh_hmqt8"]
+material = SubResource("StandardMaterial3D_8tlf2")
+size = Vector3(0.1, 2.5, 7.16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4phr1"]
+albedo_texture = ExtResource("4_3rpde")
+uv1_scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v44f4"]
+material = SubResource("StandardMaterial3D_4phr1")
+size = Vector3(0.1, 2.5, 5.5)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifi2p"]
+
+[sub_resource type="Sky" id="Sky_8482a"]
+sky_material = SubResource("ProceduralSkyMaterial_ifi2p")
+
+[sub_resource type="Environment" id="Environment_pxs6g"]
+background_mode = 2
+sky = SubResource("Sky_8482a")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GothicCommode_01_1k2" parent="." instance=ExtResource("1_ctvwy")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.45, 0, -0.0999999)
+
+[node name="WoodFloor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.8)
+mesh = SubResource("BoxMesh_rkdg6")
+
+[node name="ShortWall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 1.2, -1.83)
+mesh = SubResource("BoxMesh_icwt6")
+
+[node name="ShortWall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 1.2, -1.83)
+mesh = SubResource("BoxMesh_hmqt8")
+
+[node name="LongWall" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.2, 1.7)
+mesh = SubResource("BoxMesh_v44f4")
+
+[node name="LongWall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.2, -5.36)
+mesh = SubResource("BoxMesh_v44f4")
+
+[node name="GreenChair_01_1k" parent="." instance=ExtResource("5_6ck2q")]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 0.854451, 0, -2.67403)
+
+[node name="modern_wooden_cabinet_1k" parent="." instance=ExtResource("6_dumj7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.45, 0, -3.5)
+
+[node name="Ottoman_01_1k" parent="." instance=ExtResource("7_8vye4")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 0.731058, 0, -4.08068)
+
+[node name="side_table_tall_01_1k" parent="." instance=ExtResource("8_yuwiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.596, 0, 1.222)
+
+[node name="small_wooden_table_01_1k" parent="." instance=ExtResource("9_g1165")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.48, 0, -1.16)
+
+[node name="GothicCommode_01_1k" parent="." instance=ExtResource("1_ctvwy")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.45, 0, 1.05)
+
+[node name="gamepad_1k" parent="." instance=ExtResource("10_iat2d")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.45, 0.7, -3.519)
+
+[node name="ornate_mirror_01_1k" parent="." instance=ExtResource("11_t0rs0")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -0.2, 1.4, -5.315)
+
+[node name="GothicCommode_01_1k3" parent="." instance=ExtResource("1_ctvwy")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.45, 0, -1.25)
+
+[node name="GothicCommode_01_1k4" parent="." instance=ExtResource("1_ctvwy")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -2.301, 0, -3.256)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.852111, 0.523361, 0, -0.523361, 0.852111, 0.134562, 4.31126, 2.53128)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pxs6g")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.470227, 0.882546, 0, -0.882546, 0.470227, 0, 6.32464, 0)
+shadow_enabled = true
+
+[node name="GothicBed_01_1k" parent="." instance=ExtResource("12_socks")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.723, 0.031, 0.138)

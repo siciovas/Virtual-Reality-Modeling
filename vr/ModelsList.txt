@@ -1,0 +1,12 @@
+rectangular_parquet_1k - https://polyhaven.com/a/rectangular_parquet
+beige_wall_001_1k - https://polyhaven.com/a/beige_wall_001
+pavement_02_1k - https://polyhaven.com/a/pavement_02
+GothicBed_01_1k.gltf - https://polyhaven.com/a/GothicBed_01
+modern_wooden_cabinet_1k.gltf - https://polyhaven.com/a/modern_wooden_cabinet
+GothicCommode_01_1k.gltf - https://polyhaven.com/a/GothicCommode_01
+small_wooden_table_01_1k.gltf - https://polyhaven.com/a/small_wooden_table_01
+side_table_tall_01_1k.gltf - https://polyhaven.com/a/side_table_tall_01
+Ottoman_01_1k.gltf - https://polyhaven.com/a/Ottoman_01
+GreenChair_01_1k.gltf - https://polyhaven.com/a/GreenChair_01
+Gamepad - https://polyhaven.com/a/gamepad
+Mirror - https://polyhaven.com/a/ornate_mirror_01
